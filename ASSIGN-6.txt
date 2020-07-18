@@ -1,0 +1,15 @@
+ASSIGN-6
+
+
+1) select * fROM orders WHERE odate='1990-10-03' OR odate='1990-10-04';
+
+   select * from orders WHERE odate BETWEEN '1990-10-03' AND '1990-10-04';
+
+2) select * from customers WHERE snum IN (SELECT snum from salespeople WHERE sname='Peel' OR sname='Motika');
+
+
+3) select * from customers where cname like 'A%' OR cname like 'B%' OR cname like 'C%' OR cname like 'D%' OR cname like 'E%' OR cname like 'F%' OR cname like 'G%';
+
+4) select * from customers where cname like 'C%';
+
+5) select * from orders where amt is not null;

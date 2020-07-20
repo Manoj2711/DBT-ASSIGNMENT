@@ -1,0 +1,54 @@
+Exercise - 3
+---------------------------------------------------
+1. Display all the Supplier names with the initial letter capital.
+ 
+->  select concat(upper(substring(sname,1,1)),lower(substring(sname,2))) from supplier;
+
+2.Display all the Supplier names in upper case. 
+
+-> select upper(sname) from supplier;
+
+3.Display all the Supplier names in lower case. 
+
+-> select lower(sname) from supplier;
+
+4.. Display all the Supplier names padded to 25 characters, with spaces on the left. 
+
+->select lpad(sname,25,' ') from supplier;
+
+5.Display all the Supplier names (with ‘la’ replaced by ‘ro’).
+ HINT: REPLACE.
+ 
+-> select replace(Sname,'la','ro') from supplier;
+
+6. Implement the above command such that ‘l’ is replaced with ‘r’ and ‘a’ is replaced with ‘o’.
+
+-> select replace(replace(sname,'l','r'),'a','o') from supplier;
+
+7.Display the Supplier names and the lengths of the names.
+
+->select length(Sname) from supplier;
+
+8.Use the soundex function to search for a supplier by the name of ‘BLOKE’. 
+
+->select * from supplier where soundex(sname)=soundex('BLOKE');
+
+
+10.10. Display the current day (e.g. Thursday). 
+
+->select DAYNAME(CURDATE());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

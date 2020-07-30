@@ -56,4 +56,4 @@ of Sales).
     having sum(QTY) = (select max(sum_qty) from (select sum(QTY) as sum_qty from spj group by `S#`)as S1) ;
 
 
-9)->select deptno,max(count) from (select deptno,count(*) count from emp group by deptno) as tempp; 
+9)->select deptno,max(count) from (select deptno,count(*) count from emp group by deptno) as tempp; .
